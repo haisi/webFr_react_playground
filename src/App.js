@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Counter from "./Counter";
 
 class App extends Component {
 
@@ -36,7 +37,12 @@ class App extends Component {
     }
 
     render() {
-        return (<h1>{this.props.message} {this.names[this.state.index]}</h1>)
+        return (
+            <div>
+                <h1>{this.props.message} {this.names[this.state.index]}</h1>
+                <Counter message="Press these buttons to increment and to refresh"/>
+            </div>
+        );
     }
 }
 
