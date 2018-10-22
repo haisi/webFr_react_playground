@@ -24,10 +24,10 @@ export default class Counter extends React.Component {
     return (
       <div>
         <p style={nrStyle}>{this.state.counter}</p>
-        <button type="button" onClick={this.increment}>
+        <button type="button" onClick={this.increment} className="btn btn-secondary">
           INCR
         </button>&nbsp;
-          <button type="button" onClick={this.reset}>
+          <button type="button" onClick={this.reset} className="btn btn-danger">
           REFRESH
         </button>&nbsp;
           {this.props.message}
