@@ -16,10 +16,16 @@ class App extends Component {
         this.tick = this.tick.bind(this);
     }
 
+    /**
+     * Invoked by React as soon as this component is bound into the virtual DOM-Tree
+     */
     componentDidMount() {
         this.timer = setInterval(this.tick, 1000);
     }
 
+    /**
+     * Invoked by React before this component is removed from virtual DOM-Tree and deleted
+     */
     componentWillUnmount() {
         clearInterval(this.timer);
     }
